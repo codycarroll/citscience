@@ -1,0 +1,13 @@
+---
+title: "Untitled"
+author: "Cody Carroll"
+date: "6/1/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Introduction
+
+Citizen science projects like iNaturalist are becoming more credible as sources of research-grade data. While evasive species can create species-specific biases in the absolute counts of the data, studies concerning within-species relative abundance may sidestep these issues by assuming that such reporting biases are uniform in time. Here we consider the relative abundance of 47 species of birds in Northern California over the 2019 calendar year. The number of observations for a given species per week is obtained from iNaturalist, accessed from their API using the R package `spocc`. Seasonality curves are then constructed from iNaturalist observations using techniques from kernel density estimation. The resulting seasonal trends may then be viewed as a sample of random curves (more specifically, probability densities) and can be studied under the framework of Functional Data Analysis. We will use functional principal component analysis to model the relative abundance of these species and identify a low-dimensional latent geometry which can be used to group similar bird species by their patterns of seasonality.
